@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>core</title>
+    <link rel="stylesheet" href="nextpage.css">
+    <script src="nextpage.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="big">
+                <div class="img1">
+                    <img src="img/Frame 35236.png" alt="">
+                </div>
+                <div class="img2">
+                    <img src="img/Tab _ States.png" alt="">
+                    <img src="img/Tab _ States (1).png" alt="">
+                    <img src="img/Tab _ States (2).png" alt="">
+                </div>
+                <div class="img3">
+                    <img src="img/Frame 36695.png" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="small">
+        <img src="img/Frame 36614.png" alt="Avatar">
+        <img class="levels" src="img/Levels.png" alt="">
+        <div class="title">Bilolbek Tursunov</div>
+        <div class="subtitle">FR - 1894| Abdulaziz Yormatov</div>
+        <div class="score-card">
+            <div class="score">
+                <img src="img/Rectangle 2162.png" alt="Rocket Icon">
+                <span>999</span>
+            </div>
+            <div class="score">
+                <img src="img/гр.png" alt="XP Icon">
+                <span>300</span>
+            </div>
+        </div>
+    </div>
+
+    <button id="logout-btn" class="chiqish">Chiqish</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const logoutButton = document.getElementById('logout-btn');
+            
+            logoutButton.addEventListener('click', () => {
+                // localStorage tozalash
+                alert(`Siz ikkinchi sahifadan chiqayapsiz`)
+                localStorage.removeItem('username');
+                localStorage.removeItem('password');
+
+                // Bosh sahifaga o'tish
+                window.location.href = 'index.html'; // Agar bosh sahifa nomi boshqa bo'lsa, o'zgartiring
+            });
+        });
+    </script>
+    
+
+</body>
+</html>
